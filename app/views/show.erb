@@ -1,0 +1,10 @@
+<%= @recipe.name %>
+<%= @recipe.ingredients %>
+<%= @recipe.cook_time %>
+
+<form method="POST" action="/recipes/<%=@recipe.id%>">
+    // USE MIDDLEWARE FOR DELETE REQUESTS
+    <input type="hidden" name="_method" value="DELETE"/>
+    <input type="submit" value="delete" />
+
+</form>
